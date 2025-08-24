@@ -103,7 +103,7 @@ export default function About() {
                 className="w-80 md:w-110 rounded-b-full object-cover"
               />
 
-              <div className="absolute bg-[#12121281] dark:bg-[#f0f0f07a] bottom-[0px] right-[0px] md:right-[-20px] w-34 h-auto rounded-full flex items-center justify-center cursor-pointer group overflow-x-hidden">
+              <div className="absolute bg-[#12121281] dark:bg-[#f0f0f07a] bottom-[0px] right-[0px] md:right-[-20px] w-34 h-auto rounded-full flex items-center justify-center cursor-pointer group">
                 <svg
                   className="w-full h-full animate-spin-slow p-1"
                   viewBox="0 0 200 200"
