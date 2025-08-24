@@ -1,0 +1,127 @@
+{
+  "counters": [
+    {
+      "value": 50,
+      "label": "Projects Completed"
+    },
+    {
+      "value": 15,
+      "label": "Happy Clients"
+    },
+    {
+      "value": 30,
+      "label": "Positive Reviews"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Creative Deer",
+      "role": "Frontend Developer",
+      "period": "Aug 2025 – Present",
+      "responsibilities": [
+        "Lead development of cross-platform applications, ensuring seamless performance across mobile and web platforms.",
+        "Manage customization and maintenance of client websites to improve user experience and engagement.",
+        "Collaborate with cross-functional teams to design and implement interactive features, while optimizing application performance.",
+        "Conduct and oversee code reviews, ensuring adherence to best practices and improving overall code quality."
+      ]
+    },
+    {
+      "company": "Creative Deer",
+      "role": "Software Development Intern",
+      "period": "Feb 2025 – Jul 2025",
+      "responsibilities": [
+        "Assisted in the development of cross-platform applications, contributing to mobile and web functionality.",
+        "Supported website customization and maintenance, enhancing responsive design and usability.",
+        "Collaborated with senior developers to implement interactive features and troubleshoot performance issues.",
+        "Participated in code reviews and debugging, gaining hands-on experience in improving software quality."
+      ]
+    },
+    {
+      "company": "Freelancer",
+      "role": "Web Developer",
+      "period": "Jan 2024 – Jan 2025",
+      "responsibilities": [
+        "Developed and deployed custom websites for small businesses and individuals, focusing on responsive design and usability.",
+        "Worked with clients to gather requirements, create wireframes, and deliver tailored digital solutions.",
+        "Built modern web applications using React, Next.js, and WordPress.",
+        "Managed hosting, deployment, and ongoing maintenance to ensure reliable performance."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "JobPortal",
+      "date": "Oct 28, 2024",
+      "category": "JAVASCRIPT",
+      "link": "https://github.com/rinorze/JobPortal",
+      "image": "jobportal"
+    },
+    {
+      "title": "Runok",
+      "date": "Dec 20, 2024",
+      "category": "REACT",
+      "link": "https://github.com/rinorze/runok",
+      "image": "runok"
+    },
+    {
+      "title": "EvoSchool",
+      "date": "Oct 12, 2023",
+      "category": "HTML",
+      "link": "https://classy-maamoul-aabc8f.netlify.app/",
+      "image": "evoschool"
+    },
+    {
+      "title": "UnfinityPlus",
+      "date": "Jan 12, 2025",
+      "category": "REACT",
+      "link": "https://github.com/rinorze/UnfinityPlus",
+      "image": "unfinityplus"
+    },
+    {
+      "title": "Travel App",
+      "date": "Apr 12, 2025",
+      "category": "Node.js",
+      "link": "https://github.com/rinorze/travel-app",
+      "image": "travelapp"
+    }
+  ],
+  "education": [
+    {
+      "school": "High School",
+      "period": "Sep 2022 – May 2025",
+      "details": [
+        "Focused on Natural Sciences with advanced coursework in Mathematics, Physics, and Chemistry. Gained a solid foundation in analytical thinking and problem solving."
+      ]
+    },
+    {
+      "school": "Innovation Academy",
+      "period": "Apr 2022 – Present",
+      "details": [
+        "Learned front-end development: HTML, CSS, JavaScript, WordPress, React.js. Built several small projects to strengthen coding and design skills."
+      ]
+    },
+    {
+      "school": "Tech Lab, Speeex",
+      "period": "Jan 2025 – Apr 2025",
+      "details": [
+        "Studied backend development using Node.js, Express.js, and MongoDB. Created REST APIs and learned database design fundamentals."
+      ]
+    },
+    {
+      "school": "IBCM University",
+      "period": "Oct 2025 – Jul 2028",
+      "details": [
+        "Pursuing a degree in Computer Science and Applied IT. Deepening knowledge in algorithms, software engineering, and full-stack development."
+      ]
+    }
+  ],
+  "items": [
+    "React",
+    "Node.js",
+    "TailwindCSS",
+    "GitHub",
+    "MongoDB",
+    "Postman",
+    "Framer Motion"
+  ]
+}
