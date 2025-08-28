@@ -70,7 +70,7 @@ export default function Projects() {
         }
       }}
       className="flex flex-col items-center justify-center gap-4 w-[90%] sm:w-[85%] max-w-[1440px] mx-auto my-16 md:my-[100px] lg:my-[150px]"
-      id="about">
+      id="projects">
       <div className="w-full flex  items-center gap-4 mb-8 md:mb-12">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] tracking-wide whitespace-nowrap">
           PROJECTS

@@ -64,7 +64,7 @@ export default function Experience() {
         }
       }}
       className="flex flex-col items-center justify-center gap-8 w-[90%] sm:w-[85%] max-w-[1440px] mx-auto my-[150px]"
-      id="about">
+      id="experience">
       <div className="w-full">
         <div className="flex flex-col items-center justify-center gap-8 w-full">
           <div className="w-full flex items-center gap-4 mb-12">

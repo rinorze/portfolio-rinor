@@ -9,7 +9,9 @@ export default function Hero() {
   const rinorChars = "RINOR".split("");
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 w-[90%] sm:w-[85%] xl:max-w-[1440px] mx-auto mb-[50px]">
+    <div
+      id="home"
+      className="flex flex-col items-center justify-center gap-4 w-[90%] sm:w-[85%] xl:max-w-[1440px] mx-auto mb-[50px]">
       <motion.p
         className="text-[12px] md:text-sm text-gray-900/50 dark:text-gray-400/50 font-medium tracking-wide leading-none flex gap-1 flex-wrap justify-center"
         initial={{ opacity: 0 }}

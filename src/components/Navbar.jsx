@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { X } from "lucide-react";
 import logoLight from "../images/rinor-light-removebg.png";
 import logoDark from "../images/rinor-dark-removebg.png";
@@ -38,7 +38,7 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { id: "/", label: "HOME" },
+    { id: "home", label: "HOME" },
     { id: "about", label: "ABOUT" },
     { id: "projects", label: "PROJECTS" },
     { id: "experience", label: "EXPERIENCE" },
@@ -46,10 +46,26 @@ export default function Navbar() {
     { id: "contact", label: "CONTACT" }
   ];
 
-  const isActive = (id) => {
-    if (id === "/") return pathname === "/";
-    return pathname === `/${id}`;
-  };
+  useEffect(() => {
+    const sections = menuItems.map((item) => document.getElementById(item.id));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { root: null, rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => section && observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => section && observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <>
@@ -90,18 +106,21 @@ export default function Navbar() {
                     <ul className="flex flex-col gap-3 text-base font-semibold">
                       {menuItems.map((item) => (
                         <li key={item.id}>
-                          <Link
-                            href={`/${item.id === "/" ? "" : item.id}`}
+                          <ScrollLink
+                            to={item.id}
+                            smooth={true}
+                            duration={500}
+                            offset={-170}
                             className={`${
-                              isActive(item.id)
+                              activeSection === item.id
                                 ? "text-[var(--custom-blue)] dark:text-[var(--custom-yellow)]"
                                 : "text-[var(--custom-black)] hover:text-[var(--custom-blue)] dark:text-[var(--custom-white)] dark:hover:text-[var(--custom-yellow)] transition-colors duration-300"
                             }`}
                             onClick={() => setMenuOpen(false)}>
-                            <h1 className="text-3xl tracking-wider">
+                            <h1 className="text-3xl tracking-wider hover:cursor-pointer">
                               {item.label}
                             </h1>
-                          </Link>
+                          </ScrollLink>
                         </li>
                       ))}
                     </ul>
