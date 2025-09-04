@@ -1,7 +1,4 @@
 "use client";
-
-import Image from "next/image";
-import rinor from "@/images/rinor.jpg";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -29,18 +26,6 @@ export default function Hero() {
         ))}
       </motion.p>
       <div className="flex flex-col items-center justify-center gap-4 mb-10">
-        {/* <motion.div
-          className="absolute  z-1"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.1 }}>
-          <Image
-            src={rinor}
-            alt="Rinor Zeqiri"
-            className="rounded-full h-30 w-20 md:h-50 md:w-30 object-cover"
-          />
-        </motion.div> */}
         <motion.h1
           className="text-[140px] md:text-[220px] font-black tracking-wide text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] leading-30 md:leading-50"
           initial={{ opacity: 0 }}
