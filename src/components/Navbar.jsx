@@ -147,7 +147,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 flex-1 justify-end">
             <ThemeToggle />
             <a
-              href="/resume.pdf"
+              href="/Rinor_Zeqiri_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block px-5 py-3 rounded-full bg-[var(--custom-black)] hover:bg-[var(--custom-blue)] text-[var(--custom-white)] hover:text-[var(--custom-white)] dark:bg-[var(--custom-white)] dark:hover:bg-[var(--custom-yellow)] dark:text-[var(--custom-black)] dark:hover:text-[var(--custom-black)]  transition-colors duration-300 ease-in-out">
