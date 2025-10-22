@@ -43,8 +43,7 @@ export default function Education() {
             <div
               className="relative flex items-center gap-1.5 flex-1 overflow-visible py-2.5 hover:cursor-pointer"
               onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={() => router.push("/education")}>
+              onMouseLeave={() => setIsHovered(false)}>
               <div
                 className="relative h-1 rounded-full bg-[#1212121A] dark:bg-[#F0F0F01A]"
                 style={{

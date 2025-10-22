@@ -48,8 +48,7 @@ export default function About() {
             <div
               className="relative flex items-center gap-1.5 flex-1 overflow-visible py-2.5 hover:cursor-pointer"
               onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={() => router.push("/about")}>
+              onMouseLeave={() => setIsHovered(false)}>
               <div
                 className="relative h-1 rounded-full bg-[#1212121A] dark:bg-[#F0F0F01A]"
                 style={{
@@ -83,7 +82,7 @@ export default function About() {
               <p className="text-[18px] md:text-[22px] text-[#121212] dark:text-[#F0F0F0] mb-4">
                 Passionate about creativity and problem-solving, I enjoy turning
                 ideas into impactful digital solutions. Currently pursuing
-                studies at IBCM University, I am expanding my knowledge in both
+                studies at Isa Boletini University, I am expanding my knowledge in both
                 technology and business while gaining hands-on experience in the
                 industry.
               </p>
