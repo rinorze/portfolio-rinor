@@ -1,13 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function Contact() {
   const [isHovered, setIsHovered] = useState(false);
-  const router = useRouter();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const controls = useAnimation();
 
@@ -68,7 +66,7 @@ export default function Contact() {
       <div className="w-full mt-20">
         <div className="flex flex-col items-center justify-center gap-8 w-full">
           <div className="w-full flex items-center gap-4 mb-12">
-            <h1 className="text-2xl md:text-4xl font-bold text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] tracking-wide whitespace-nowrap">
+            <h1 className="text-2xl md:text-4xl font-bold text-[var(--custom-blue)] tracking-wide whitespace-nowrap">
               CONTACT
             </h1>
 
@@ -77,14 +75,14 @@ export default function Contact() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}>
               <div
-                className="relative h-1 rounded-full bg-[#1212121A] dark:bg-[#F0F0F01A]"
+                className="relative h-1 rounded-full bg-[#1212121A]"
                 style={{
                   width: isHovered ? `${hoverWidth}%` : `${defaultWidth}%`,
                   transition: "width 0.5s ease-out"
                 }}></div>
 
               <motion.svg
-                className="w-8 h-8 text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] absolute right-0"
+                className="w-8 h-8 text-[var(--custom-blue)] absolute right-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -109,59 +107,74 @@ export default function Contact() {
 
       <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-30">
         <div className="flex-1">
-          <p className="text-[var(--custom-black)] dark:text-[var(--custom-white)] mb-6 text-lg lg:text-2xl">
+          <p className="text-[var(--custom-black)] mb-6 text-lg lg:text-2xl">
             Looking to start a project or you need consultation? Feel free to
             contact me.
           </p>
-          <p className="text-[var(--custom-black)] dark:text-[var(--custom-white)] text-lg lg:text-xl">
+          <p className="text-[var(--custom-black)] text-lg lg:text-xl">
             Vushtrri, Kosovo
           </p>
 
           <a
             href="mailto:rzeqiri03@gmail.com"
-            className="block w-fit text-lg lg:text-xl text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] hover:underline cursor-pointer">
+            className="block w-fit text-lg lg:text-xl text-[var(--custom-blue)] hover:underline cursor-pointer">
             rzeqiri03@gmail.com
           </a>
         </div>
 
         <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Rinor Zeqiri"
-              value={form.name}
+            <div className="w-full sm:w-1/2 flex flex-col gap-2">
+              <label htmlFor="name" className="text-sm font-medium text-[var(--custom-black)]">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. John Doe"
+                value={form.name}
+                onChange={handleChange}
+                className="w-full px-4 py-4 rounded-md bg-[#1212121A] text-[var(--custom-black)] focus:outline-none focus:ring-2 focus:ring-[var(--custom-blue)]"
+                required
+              />
+            </div>
+            <div className="w-full sm:w-1/2 flex flex-col gap-2">
+              <label htmlFor="email" className="text-sm font-medium text-[var(--custom-black)]">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g. john@example.com"
+                value={form.email}
+                onChange={handleChange}
+                className="w-full px-4 py-4 rounded-md bg-[#1212121A] text-[var(--custom-black)] focus:outline-none focus:ring-2 focus:ring-[var(--custom-blue)]"
+                required
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="message" className="text-sm font-medium text-[var(--custom-black)]">
+              Your Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell me about your project or idea..."
+              value={form.message}
               onChange={handleChange}
-              className="w-full sm:w-1/2 px-4 py-4 rounded-md bg-[#1212121A] dark:bg-[#F0F0F01A] text-[var(--custom-black)] dark:text-[var(--custom-white)] focus:outline-none focus:ring-2 focus:ring-[var(--custom-blue)] 
-             dark:focus:ring-[var(--custom-yellow)]"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="rzeqiri03@gmail.com"
-              value={form.email}
-              onChange={handleChange}
-              className="w-full sm:w-1/2 px-4 py-4 rounded-md bg-[#1212121A] dark:bg-[#F0F0F01A] text-[var(--custom-black)] dark:text-[var(--custom-white)] focus:outline-none focus:ring-2 focus:ring-[var(--custom-blue)] 
-             dark:focus:ring-[var(--custom-yellow)]"
+              className="w-full px-4 py-4 rounded-md bg-[#1212121A] text-[var(--custom-black)] min-h-[120px] focus:outline-none focus:ring-2 focus:ring-[var(--custom-blue)]"
               required
             />
           </div>
-          <textarea
-            name="message"
-            placeholder="Message..."
-            value={form.message}
-            onChange={handleChange}
-            className="w-full px-4 py-2 rounded-md bg-[#1212121A] dark:bg-[#F0F0F01A] text-[var(--custom-black)] dark:text-[var(--custom-white)] min-h-[120px] focus:outline-none focus:ring-2 focus:ring-[var(--custom-blue)] 
-             dark:focus:ring-[var(--custom-yellow)]"
-            required
-          />
           <button
             type="submit"
-            className="bg-[var(--custom-blue)] hover:bg-[var(--custom-black)] text-[var(--custom-white)] hover:text-[var(--custom-white)] dark:bg-[var(--custom-yellow)] dark:hover:bg-[var(--custom-white)] dark:text-[var(--custom-black)] dark:hover:text-[var(--custom-black)]  transition-colors duration-300 ease-in-out font-medium py-3 rounded-md cursor-pointer">
-            Send
+            className="bg-[var(--custom-blue)] hover:bg-[var(--custom-black)] text-[var(--custom-white)] transition-colors duration-300 ease-in-out font-medium py-3 rounded-md cursor-pointer">
+            Send Message
           </button>
-          {status && <p className="text-sm text-gray-400">{status}</p>}
+          {status && <p className="text-sm text-gray-600">{status}</p>}
         </form>
       </div>
     </motion.div>

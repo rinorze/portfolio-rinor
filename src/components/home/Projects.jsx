@@ -25,7 +25,6 @@ export default function Projects() {
   const router = useRouter();
   const [hovered, setHovered] = useState(null);
   const [previewTop, setPreviewTop] = useState(0);
-  const [isBarHover, setIsBarHover] = useState(false);
 
   const projects = data.projects;
 
@@ -72,7 +71,7 @@ export default function Projects() {
       className="flex flex-col items-center justify-center gap-4 w-[90%] sm:w-[85%] max-w-[1440px] mx-auto my-16 md:my-[100px] lg:my-[150px]"
       id="projects">
       <div className="w-full flex  items-center gap-4 mb-8 md:mb-12">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] tracking-wide whitespace-nowrap">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--custom-blue)] tracking-wide whitespace-nowrap">
           PROJECTS
         </h1>
 
@@ -81,14 +80,14 @@ export default function Projects() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}>
           <div
-            className="relative h-1 rounded-full bg-[#1212121A] dark:bg-[#F0F0F01A] w-full"
+            className="relative h-1 rounded-full bg-[#1212121A] w-full"
             style={{
               width: isHovered ? `${hoverWidth}%` : `${defaultWidth}%`,
               transition: "width 0.5s ease-out"
             }}></div>
 
           <motion.svg
-            className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] absolute right-0"
+            className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[var(--custom-blue)] absolute right-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -110,22 +109,21 @@ export default function Projects() {
       </div>
 
       <div
-        className="w-full relative flex flex-col divide-y divide-gray-300 dark:divide-gray-700"
+        className="w-full relative flex flex-col divide-y divide-gray-300"
         onMouseLeave={handleLeave}>
         {projects.map((project, index) => (
           <div
             key={index}
             className={`group flex  md:items-center justify-between py-6 md:py-8 lg:py-10 cursor-pointer ${
               index === projects.length - 1
-                ? "border-b border-gray-300 dark:border-gray-700"
+                ? "border-b border-gray-300"
                 : ""
             }`}
             onMouseEnter={(e) => handleEnter(e, index)}
             onClick={() => router.push(project.link)}>
             <p
               className="font-sans text-xl md:text-2xl font-semibold transition-colors duration-300 
-                group-hover:text-[var(--custom-blue)] 
-                dark:group-hover:text-[var(--custom-yellow)]
+                group-hover:text-[var(--custom-blue)]
                 mb-2 md:mb-0">
               {project.title}
             </p>
@@ -134,7 +132,7 @@ export default function Projects() {
               <p className="text-sm md:text-md font-medium hidden md:block">
                 {project.date}
               </p>
-              <p className="text-md md:text-lg text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] font-semibold tracking-wide">
+              <p className="text-md md:text-lg text-[var(--custom-blue)] font-semibold tracking-wide">
                 {project.category}
               </p>
             </div>

@@ -1,23 +1,23 @@
 {
   "counters": [
     {
-      "value": 50,
+      "value": 5,
       "label": "Projects Completed"
     },
     {
-      "value": 15,
+      "value": 3,
       "label": "Happy Clients"
     },
     {
-      "value": 30,
-      "label": "Positive Reviews"
+      "value": 3,
+      "label": "Years Experience"
     }
   ],
   "experiences": [
     {
       "company": "Creative Deer",
       "role": "Software Developer",
-      "period": "Aug 2025 – Present",
+      "period": "Aug 2025 – Jan 2026",
       "responsibilities": [
         "Lead development of cross-platform applications, ensuring seamless performance across mobile and web platforms.",
         "Manage customization and maintenance of client websites to improve user experience and engagement.",
@@ -53,7 +53,7 @@
       "title": "JobPortal",
       "date": "Oct 28, 2024",
       "category": "JAVASCRIPT",
-      "link": "https://github.com/rinorze/JobPortal",
+      "link": "https://jobportal-platform.vercel.app/",
       "image": "jobportal"
     },
     {
@@ -87,17 +87,10 @@
   ],
   "education": [
     {
-      "school": "High School",
-      "period": "Sep 2022 – May 2025",
+      "school": "Isa Boletini University",
+      "period": "Oct 2025 – Jul 2028",
       "details": [
-        "Focused on Natural Sciences with advanced coursework in Mathematics, Physics, and Chemistry. Gained a solid foundation in analytical thinking and problem solving."
-      ]
-    },
-    {
-      "school": "Innovation Academy",
-      "period": "Apr 2022 – Present",
-      "details": [
-        "Learned front-end development: HTML, CSS, JavaScript, WordPress, React.js. Built several small projects to strengthen coding and design skills."
+        "Pursuing a degree in Computer Science and Engineering. Deepening knowledge in algorithms, software engineering, and full-stack development."
       ]
     },
     {
@@ -108,10 +101,17 @@
       ]
     },
     {
-      "school": "Isa Boletini University",
-      "period": "Oct 2025 – Jul 2028",
+      "school": "Innovation Academy",
+      "period": "Apr 2022 – Present",
       "details": [
-        "Pursuing a degree in Computer Science and Engineering. Deepening knowledge in algorithms, software engineering, and full-stack development."
+        "Learned front-end development: HTML, CSS, JavaScript, WordPress, React.js. Built several small projects to strengthen coding and design skills."
+      ]
+    },
+    {
+      "school": "High School",
+      "period": "Sep 2022 – May 2025",
+      "details": [
+        "Focused on Natural Sciences with advanced coursework in Mathematics, Physics, and Chemistry. Gained a solid foundation in analytical thinking and problem solving."
       ]
     }
   ],

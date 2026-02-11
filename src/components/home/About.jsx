@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
@@ -11,7 +10,6 @@ import rinor from "@/images/rinor.jpg";
 
 export default function About() {
   const [isHovered, setIsHovered] = useState(false);
-  const router = useRouter();
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const controls = useAnimation();
@@ -41,7 +39,7 @@ export default function About() {
       <div className="w-full">
         <div className="flex flex-col items-center justify-center gap-8 w-full">
           <div className="w-full flex items-center gap-4 mb-12">
-            <h1 className="text-2xl md:text-4xl font-bold text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] tracking-wide whitespace-nowrap">
+            <h1 className="text-2xl md:text-4xl font-bold text-[var(--custom-blue)] tracking-wide whitespace-nowrap">
               ABOUT
             </h1>
 
@@ -50,14 +48,14 @@ export default function About() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}>
               <div
-                className="relative h-1 rounded-full bg-[#1212121A] dark:bg-[#F0F0F01A]"
+                className="relative h-1 rounded-full bg-[#1212121A]"
                 style={{
                   width: isHovered ? `${hoverWidth}%` : `${defaultWidth}%`,
                   transition: "width 0.5s ease-out"
                 }}></div>
 
               <motion.svg
-                className="w-8 h-8 text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] absolute right-0"
+                className="w-8 h-8 text-[var(--custom-blue)] absolute right-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -79,14 +77,14 @@ export default function About() {
           </div>
           <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between gap-20 w-full">
             <div className="w-full lg:w-1/2">
-              <p className="text-[18px] md:text-[22px] text-[#121212] dark:text-[#F0F0F0] mb-4">
+              <p className="text-[18px] md:text-[22px] text-[#121212] mb-4">
                 Passionate about creativity and problem-solving, I enjoy turning
                 ideas into impactful digital solutions. Currently pursuing
                 studies at Isa Boletini University, I am expanding my knowledge in both
                 technology and business while gaining hands-on experience in the
                 industry.
               </p>
-              <p className="text-[18px] md:text-[22px] text-[#121212] dark:text-[#F0F0F0] mb-4">
+              <p className="text-[18px] md:text-[22px] text-[#121212] mb-4">
                 My professional journey began with an internship at Creative
                 Deer, where I had the opportunity to grow, learn, and contribute
                 to real projects. That experience led me to continue working
@@ -102,7 +100,7 @@ export default function About() {
                 className="w-80 md:w-110 rounded-b-full object-cover"
               />
 
-              <div className="absolute bg-[#12121281] dark:bg-[#f0f0f07a] bottom-[0px] right-[0px] md:right-[-20px] w-34 h-auto rounded-full flex items-center justify-center cursor-pointer group">
+              <div className="absolute bg-[#12121281] bottom-[0px] right-[0px] md:right-[-20px] w-34 h-auto rounded-full flex items-center justify-center cursor-pointer group">
                 <svg
                   className="w-full h-full animate-spin-slow p-1"
                   viewBox="0 0 200 200"
@@ -118,7 +116,7 @@ export default function About() {
                   </defs>
                   <text
                     fill="currentColor"
-                    className="text-[28px] font-semibold tracking-wide text-[var(--custom-white)] dark:text-[var(--custom-black)]">
+                    className="text-[28px] font-semibold tracking-wide text-[var(--custom-white)]">
                     <textPath xlinkHref="#circlePath" startOffset="1%">
                       • LET'S TALK • LET'S TALK • LET'S TALK • LET'S TALK
                     </textPath>
@@ -131,7 +129,7 @@ export default function About() {
                     smooth={true}
                     duration={500}
                     offset={-150}
-                    className="px-7 py-[22.5px] text-2xl hover:rotate-[-45deg] transition-transform duration-300 bg-[var(--custom-black)] dark:bg-[var(--custom-white)] text-[var(--custom-white)] dark:text-[var(--custom-black)] rounded-full cursor-pointer">
+                    className="px-7 py-[22.5px] text-2xl hover:rotate-[-45deg] transition-transform duration-300 bg-[var(--custom-black)] text-[var(--custom-white)] rounded-full cursor-pointer">
                     ↓
                   </ScrollLink>
                 </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { motion, useAnimation, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -32,7 +31,7 @@ function Counter({ to, suffix = "+", duration = 2, compact = false }) {
   return (
     <span
       ref={ref}
-      className="text-6xl md:text-7xl font-extrabold tracking-wide text-[var(--custom-blue)] dark:text-[var(--custom-yellow)]">
+      className="text-6xl md:text-7xl font-extrabold tracking-wide text-[var(--custom-blue)]">
       {formatted}
       {suffix}
     </span>
@@ -41,7 +40,6 @@ function Counter({ to, suffix = "+", duration = 2, compact = false }) {
 
 export default function Experience() {
   const [isHovered, setIsHovered] = useState(false);
-  const router = useRouter();
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const controls = useAnimation();
@@ -68,7 +66,7 @@ export default function Experience() {
       <div className="w-full">
         <div className="flex flex-col items-center justify-center gap-8 w-full">
           <div className="w-full flex items-center gap-4 mb-12">
-            <h1 className="text-2xl md:text-4xl font-bold text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] tracking-wide whitespace-nowrap">
+            <h1 className="text-2xl md:text-4xl font-bold text-[var(--custom-blue)] tracking-wide whitespace-nowrap">
               EXPERIENCE
             </h1>
 
@@ -77,14 +75,14 @@ export default function Experience() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}>
               <div
-                className="relative h-1 rounded-full bg-[#1212121A] dark:bg-[#F0F0F01A]"
+                className="relative h-1 rounded-full bg-[#1212121A]"
                 style={{
                   width: isHovered ? `${hoverWidth}%` : `${defaultWidth}%`,
                   transition: "width 0.5s ease-out"
                 }}
               />
               <motion.svg
-                className="w-8 h-8 text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] absolute right-0"
+                className="w-8 h-8 text-[var(--custom-blue)] absolute right-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -109,17 +107,15 @@ export default function Experience() {
               <div
                 key={index}
                 className={`flex flex-col gap-3 py-6 ${
-                  index < 2
-                    ? "border-b border-gray-300 dark:border-gray-700"
-                    : ""
+                  index < 2 ? "border-b border-gray-300" : ""
                 }`}>
-                <h2 className="text-xl md:text-2xl font-semibold text-[var(--custom-blue)] dark:text-[var(--custom-yellow)]">
+                <h2 className="text-xl md:text-2xl font-semibold text-[var(--custom-blue)]">
                   {exp.role} — {exp.company}
                 </h2>
-                <p className="text-md font-medium text-gray-600 dark:text-gray-400">
+                <p className="text-md font-medium text-gray-600">
                   {exp.period}
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-[14px] md:text-[18px] text-[#121212] dark:text-[#F0F0F0]">
+                <ul className="list-disc list-inside space-y-2 text-[14px] md:text-[18px] text-[#121212]">
                   {exp.responsibilities.map((task, i) => (
                     <li key={i}>{task}</li>
                   ))}
@@ -128,25 +124,25 @@ export default function Experience() {
             ))}
           </div>
 
-          <div className="flex flex-col md:flex-row md:divide-x divide-[#1212121A] dark:divide-[#F0F0F01A] md:mt-10 ">
-            <div className="flex flex-col items-center px-4 md:px-8">
-              <Counter to={10} suffix="+" />
-              <p className="text-2xl text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] text-center mt-2">
+          <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0 md:divide-x divide-[#1212121A] mt-10 w-full">
+            <div className="flex flex-col items-center flex-1 px-4 md:px-8">
+              <Counter to={5} suffix="+" />
+              <p className="text-2xl text-[var(--custom-blue)] text-center mt-2">
                 Projects Completed
               </p>
             </div>
 
-            <div className="flex flex-col items-center px-4 md:px-8 py-4 md:py-0">
-              <Counter to={50} suffix="+" compact />
-              <p className="text-2xl text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] text-center mt-2">
+            <div className="flex flex-col items-center flex-1 px-4 md:px-8">
+              <Counter to={7} suffix="+" compact />
+              <p className="text-2xl text-[var(--custom-blue)] text-center mt-2">
                 Satisfied Clients
               </p>
             </div>
 
-            <div className="flex flex-col items-center px-4 md:px-8 py-4 md:py-0">
-              <Counter to={100} suffix="+" />
-              <p className="text-2xl text-[var(--custom-blue)] dark:text-[var(--custom-yellow)] text-center mt-2">
-                Positive Reviews
+            <div className="flex flex-col items-center flex-1 px-4 md:px-8">
+              <Counter to={3} suffix="+" />
+              <p className="text-2xl text-[var(--custom-blue)] text-center mt-2">
+                Years Experience
               </p>
             </div>
           </div>

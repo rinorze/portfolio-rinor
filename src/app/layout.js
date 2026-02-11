@@ -1,9 +1,5 @@
 import { DM_Sans, Big_Shoulders } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
-
-import Navbar from "@/components/Navbar";
-import "./globals.css";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -24,13 +20,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${dmSans.variable} ${bigShoulders.variable} antialiased`}>
-        <Providers>
-          <Navbar />
-          {children}
-        </Providers>
+        {children}
       </body>
     </html>
   );
